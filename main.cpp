@@ -19,10 +19,7 @@ int main()
 	std::chrono::high_resolution_clock::time_point finish = std::chrono::high_resolution_clock::now();
 	auto finaltime = std::chrono::duration_cast<std::chrono::seconds>(finish-start).count();
 	data.SetTime(finaltime);
-	//data.ShowData();
-	std::ofstream info;
-    info.open("info.txt");
-    ShowData(info);
-    info.close();
+	data.ShowData();
+	data.SaveData();
 	system("pause");
 }
