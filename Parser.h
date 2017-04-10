@@ -22,6 +22,7 @@ public:
 	void Searching(fs::path root_folder);
 	void Parsing();
 	void ShowData();
+	void SaveData();
 	void SetTime(unsigned int time_) { time = time_; };
 
 private:
