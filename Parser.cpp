@@ -13,6 +13,18 @@ void Data::ShowData()
 	std::cout << "Code lines: " << all_lines - empty_lines - comment_lines << std::endl;
 	std::cout << "Parsing time: " << time << std::endl;
 }
+	
+void Data::SaveData()
+{
+	std::ofstream out("info.txt");
+	std::cout << "All files: " << all_files << std::endl;
+	std::cout << "All lines: " << all_lines << std::endl;
+	std::cout << "Empty lines: " << empty_lines << std::endl;
+	std::cout << "Commented lines: " << comment_lines << std::endl;
+	std::cout << "Code lines: " << all_lines - empty_lines - comment_lines << std::endl;
+	std::cout << "Parsing time: " << time << std::endl;
+	out.close();
+}
 
 void Data::Searching(fs::path root_folder)
 {
