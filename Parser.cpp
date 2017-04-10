@@ -32,7 +32,6 @@ void Data::Parsing()
 	while(is_searching || !files.Empty())
 	{
 		std::string file_path = files.Pop();
-		Sleep(10);
 		std::ifstream file;
 		file.open(file_path);
 		all_files++;
