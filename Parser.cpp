@@ -17,12 +17,12 @@ void Data::ShowData()
 void Data::SaveData()
 {
 	std::ofstream out("info.txt");
-	std::cout << "All files: " << all_files << std::endl;
-	std::cout << "All lines: " << all_lines << std::endl;
-	std::cout << "Empty lines: " << empty_lines << std::endl;
-	std::cout << "Commented lines: " << comment_lines << std::endl;
-	std::cout << "Code lines: " << all_lines - empty_lines - comment_lines << std::endl;
-	std::cout << "Parsing time: " << time << std::endl;
+	out << "All files: " << all_files << std::endl;
+	out << "All lines: " << all_lines << std::endl;
+	out << "Empty lines: " << empty_lines << std::endl;
+	out << "Commented lines: " << comment_lines << std::endl;
+	out << "Code lines: " << all_lines - empty_lines - comment_lines << std::endl;
+	out << "Parsing time: " << time << std::endl;
 	out.close();
 }
 
