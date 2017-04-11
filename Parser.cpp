@@ -30,10 +30,11 @@ void Data::Searching(fs::path root_folder)
 {
 	for (fs::recursive_directory_iterator it(root_folder), end; it != end; ++it) 
 	{
+		std::string tempfilepath = it->path().string();
 		if (it->path().extension() == ".cpp" || it->path().extension() == ".c" 
 			|| it->path().extension() == ".hpp" || it->path().extension() == ".h")
 		{
-			files.Add((*it).path().string());
+			files.Add(tempfilepath);
 		}
 	}
 	is_searching = false;
